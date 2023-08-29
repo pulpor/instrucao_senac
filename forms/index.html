@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Harry Potter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="conteinerPai">
+        <div class="container">
+            
+            <form class="forms">
+                <h1 id="title">SescWarts</h1>
+                <fieldset> <!-- sessão + barrinhas pretas -->
+                    <legend>Informações Pessoais</legend><br>
+
+                    <label for="nome">Bruxo(a):</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome bruxo aqui">
+                    
+                    <label for="email">Corruja eletrônica:</label>
+                    <input type="email" id="email" placeholder="Seu e-mail bruxo aqui" name="email" required>
+                    
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" placeholder="Sua senha de bruxo aqui" required>
+
+                    <div class="colunas">
+                        <div class="nascimento">
+                            <label for="dtnasc">Data Nascimento:</label>
+                            <input type='date' id='dtnasc' name='dtnasc' required>
+                        </div>
+                        <div class="nascimento">
+                            <label for="time">Hora de nascimento:</label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferências</legend><br>
+                    
+                    <label>Escolha sua matéria favorita:</label>
+                    
+                    <div class="radio-option">
+                        🪄<input type="radio" id="feiticos" name="materia_favorita" value="feiticos">
+                        <label for="feiticos">Feitiços </label>
+                    </div>
+                    
+                    <div class="radio-option">
+                        👨‍💻<input type="radio" id="informatica" name="materia_favorita" value="informatica">
+                        <label for="informatica">Informática </label>
+                    </div>
+                    
+                    <div class="radio-option">
+                        ⚗️<input type="radio" id="pocoes" name="materia_favorita" value="pocoes">
+                        <label for="pocoes">Poções </label>
+                    </div>
+                    
+                    <div class="radio-option">
+                        🐉<input type="radio" id="criaturas" name="materia_favorita" value="criaturas">
+                        <label for="criaturas">Criaturas Mágicas </label>
+                    </div>
+                    
+                    <div class="colunas">
+                        <div id="corcoluna">
+                            <label for="cor">Cor favorita: </label>
+                            <input type='color' id='cor' name='cor'>
+                        </div>
+            
+                        <div id="corcoluna">
+                            <label for="casa">Escolha sua Casa: </label>
+                        
+                            <select id="casa" name="casa">
+                                <option value="no">Sem Preferências</option>
+                                <option value="grifinoria">Grifinória</option>
+                                <option value="sonserina">Sonserina</option>
+                                <option value="corvinal">Corvinal</option>
+                                <option value="lufa-lufa">Lufa-Lufa</option>
+                            </select><br><br>
+                        </div>
+
+                    </div>
+                    
+                </fieldset>
+                
+                <fieldset><br>
+                    <legend>Comentários</legend>
+                    <label for="comentarios">Comentários:</label><br>
+                    <textarea id="comentarios" name="comentarios" rows="4" cols="50"> </textarea><br><br>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Envio</legend><br>
+                    
+                    <div class="envio">
+                        <div class="checkbox">
+                            <input type="checkbox" id="aceito" name="aceito" required>
+                        </div>
+                    
+                        <div class="checkbox2">
+                            <label for="aceito">Eu aceito os Termos e Condições</label><br>
+                        </div>
+                    </div>
+
+                <div class="botoes">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Enviar">
+                </div>
+
+                    
+                </fieldset>
+                
+            </form>
+
+            <div id="imglogo">
+                <img id="logo" src="./imgs/hog.png" alt="">
+            </div>
+        
+        </div>
+    </div>
+
+</body>
+</html>

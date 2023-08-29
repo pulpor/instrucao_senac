@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Inter&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Inter&family=Pacifico&family=Paprika&display=swap');
+
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    background-image: url('imgs/textura.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="date"],
+input[type="time"]{
+    width: 100%; /* Define todos os campos de entrada com 100% de largura */
+    box-sizing: border-box; /* Mantém o tamanho total, incluindo preenchimento e borda */
+    padding: 5px; /* Espaçamento interno para o campo de entrada */
+    margin-bottom: 10px; /* Espaçamento entre os campos de entrada */
+    border: 1px solid #ccc; /* Adiciona uma borda para separar visualmente os campos */
+    border-radius: 5px; /* Arredonda as bordas dos campos */
+}
+
+#logo {
+    width: 55rem;
+    height: 30rem;
+}
+
+#title {
+    text-align: center;
+    font-family: 'Pacifico';
+    color:#8cc000;
+    text-shadow:    -2px -2px 0 black, 
+                    2px -2px 0 black,
+                    -2px 2px 0 black, 
+                    2px 2px 0 black;
+}
+
+fieldset {
+    width: 500px;
+    border-radius: 15px;
+    border: 1px solid #8cc000; 
+    background-color: rgba(41, 41, 41, 0.8);
+    margin-top: 5px ;
+}
+
+legend{
+    margin-left: 15px;
+    font-size: 1.2rem;
+    font-style: oblique; /* italico */ 
+    font-weight: bold; /* negrito */ 
+}
+
+label{
+    display: block;
+    font-family: 'Paprika', cursive;
+    font-size: 12px; 
+    font-weight: bold;  /* Deixa os rótulos em negrito */
+    margin: 12px 0 10px 0;   
+}
+
+.colunas {
+    height: 85px;
+    display: flex; 
+    align-items: center;
+    justify-content:space-around;
+    text-align: center;
+}
+
+.nascimento{
+ margin: 5px;
+ text-align: center;
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+input[type="radio"] {
+    width: 30px;
+    display: flex;
+    columns: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-option {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space;
+}
+
+.envio {
+    display: flex;
+    align-items: center;
+}
+
+#aceito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    margin-right: 5px;
+}
+
+.checkbox2 {
+    display: flex;
+    align-items: center;
+}
+
+select {
+    height: 30px;
+}
+
+textarea {
+    resize: none;
+    width: 98%;
+}
+
+.botoes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="reset"],
+input[type="submit"]{
+    color: white;
+    background-color:  #8cc000;
+    border-radius: 2rem;
+    font-size: 15px;
+    width: 150px;
+    height: 30px;
+}
+
+#corcoluna{
+    height: 70px;
+}
+
+#casa {
+    background-color: white; /* Cor de fundo padrão */
+    border: 1px solid #ccc; /* Borda padrão */
+    padding: 5px;
+    border-radius: 50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#casa option[value="no"] {
+    background-color: rgb(59, 59, 59);
+    color: white;
+}
+
+
+#casa option[value="grifinoria"] {
+    background-color: red;
+    color: white;
+}
+
+#casa option[value="sonserina"] {
+    background-color: green;
+    color: white;
+}
+
+#casa option[value="corvinal"] {
+    background-color: blue;
+    color: white;
+}
+
+#casa option[value="lufa-lufa"] {
+    background-color: yellow;
+    color: black;
+}
+
+#imglogo{
+width: 600px;
+}
+
+.container{
+    height:1800px;
+}
