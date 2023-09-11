@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#switch{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	width: 200px;
+	height: 100px;
+	background: grey;
+	display: block;
+	position: relative;
+	border-radius: 100px;
+	cursor: pointer;
+}
+
+label:after {
+	content: ''; /* conteudo dentro */
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 90px;
+	height: 90px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #bada55;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 130px;
+}
