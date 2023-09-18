@@ -1,160 +1,181 @@
+/* Define um conjunto de regras CSS para todos os elementos (*) */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Define margem zero para todos os lados do elemento */
+    padding: 0; /* Define preenchimento zero para todos os lados do elemento */
 }
 
+/* Define regras CSS para o elemento raiz HTML e o corpo do documento */
 html,
 body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  font-family: 'Open Sans Condensed', sans-serif;
+    width: 100%; /* Define a largura como 100% da largura da tela */
+    height: 100%; /* Define a altura como 100% da altura da tela */
+    overflow: hidden; /* Esconde qualquer overflow de conteúdo além da tela */
+    margin: 0; /* Define margem zero para todos os lados do elemento */
+    display: flex; /* Usa o modelo de layout flexível */
+    flex-direction: column; /* Organiza os filhos em uma coluna */
+    flex-wrap: wrap; /* Permite que os elementos se quebrem em várias linhas conforme necessário */
+    font-family: 'Open Sans Condensed', sans-serif; /* Define a família de fontes */
 }
 
+/* Define regras CSS para elementos com classes contendo "box" */
 div[class*=box] {
-  height: 33.33%;
-  width: 100%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 33.33%; /* Define a altura como um terço da altura do contêiner pai */
+    width: 100%; /* Define a largura como 100% da largura do contêiner pai */
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: center; /* Centraliza horizontalmente os filhos */
+    align-items: center; /* Centraliza verticalmente os filhos */
 }
 
-.background{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    z-index: -1; /* move o fundo p trás */
+/* Define regras CSS para o elemento com classe "background" */
+.background {
+    position: fixed; /* Fixa a posição do elemento na tela */
+    width: 100%; /* Define a largura como 100% da largura da tela */
+    height: 100vh; /* Define a altura como 100% da altura da janela de visualização */
+    z-index: -1; /* Move o elemento para trás de outros elementos */
 }
 
-video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* cobertura total */
+/* Define regras CSS para elementos de vídeo */
+video {
+    width: 150%; /* Define a largura como 150% da largura do contêiner pai */
+    height: 150%; /* Define a altura como 150% da altura do contêiner pai */
+    object-fit: cover; /* Redimensiona o vídeo para cobrir todo o espaço disponível */
 }
 
-.background::after{
-    content: '';
-
-    width: inherit; /* largura da div em que está dentro */
-    height: inherit; /* altura da div em que está dentro */
-
-    inset: 0; /* margins internet */ 
-    position: fixed;
-    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%,rgba(10, 12, 16, 0.7) 50%,rgba(10, 12, 16, 0.99) 85% );
+/* Define regras CSS para o pseudoelemento ::after do elemento com classe "background" */
+.background::after {
+    content: ''; /* Adiciona conteúdo gerado pelo pseudoelemento */
+    width: inherit; /* Herda a largura do elemento pai */
+    height: inherit; /* Herda a altura do elemento pai */
+    inset: 0; /* Define margens internas como zero */
+    position: fixed; /* Fixa a posição do pseudoelemento na tela */
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%); /* Define um gradiente linear como fundo */
 }
 
-.app{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
-    height: 100VH;
+/* Define regras CSS para o elemento com classe "app" */
+.app {
+    display: flex; /* Usa o modelo de layout flexível */
+    flex-direction: column; /* Organiza os filhos em uma coluna */
+    align-items: center; /* Centraliza horizontalmente os filhos */
+    width: 100%; /* Define a largura como 100% da largura do contêiner pai */
+    height: 100vh; /* Define a altura como 100% da altura da janela de visualização */
 }
 
-header{
-    display: flex;
-    align-items: center;
-    column-gap: 64px;
-    width: 100%;
-    max-width: 1200px ;
-    padding-top: 24px;
+/* Define regras CSS para o cabeçalho */
+header {
+    display: flex; /* Usa o modelo de layout flexível */
+    align-items: center; /* Centraliza verticalmente os filhos */
+    column-gap: 64px; /* Define o espaçamento entre as colunas */
+    width: 100%; /* Define a largura como 100% da largura do contêiner pai */
+    max-width: 1200px; /* Define a largura máxima do cabeçalho */
+    padding-top: 24px; /* Define o preenchimento superior */
 }
 
-header img{
-    width: 70px;
-    height: auto;
+/* Define regras CSS para a imagem dentro do cabeçalho */
+header img {
+    width: 70px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção de altura automática */
 }
 
-.lista{
-    display: flex;
-    align-items: center;
-    column-gap: 48px;
-    list-style: none; /* tira as bolinhas */
-    color: aliceblue;
+/* Define regras CSS para a lista não ordenada com classe "lista" */
+.lista {
+    display: flex; /* Usa o modelo de layout flexível */
+    align-items: center; /* Centraliza verticalmente os filhos */
+    column-gap: 48px; /* Define o espaçamento entre as colunas */
+    list-style: none; /* Remove os marcadores de lista */
+    color: aliceblue; /* Define a cor do texto */
 }
 
-.item{
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
+/* Define regras CSS para itens da lista com classe "item" */
+.item {
+    font-size: 14px; /* Define o tamanho da fonte */
+    font-weight: 300; /* Define o peso da fonte */
+    letter-spacing: 2px; /* Define o espaçamento entre letras */
+    text-transform: uppercase; /* Converte o texto para maiúsculas */
+    cursor: pointer; /* Define o cursor do mouse como um ponteiro */
 }
 
-.item:hover{
-    color: rgba(184, 45, 45, 0.829);
+/* Define regras de hover (quando o mouse passa sobre) para itens da lista */
+.item:hover {
+    color: rgba(184, 45, 45, 0.829); /* Altera a cor do texto quando hover */
 }
 
-#chapeu{
-    transition: all 0.4s;
+/* Define regras CSS para o elemento com id "chapeu" */
+#chapeu {
+    transition: all 0.4s; /* Adiciona uma transição de 0.4 segundos para todas as propriedades */
 }
 
-#chapeu:hover{
-    transform: rotate(35deg);
+/* Define regras de hover (quando o mouse passa sobre) para o elemento com id "chapeu" */
+#chapeu:hover {
+    transform: rotate(35deg); /* Rotaciona o elemento em 35 graus quando hover */
 }
 
-.rede{
-    width: 36px;
-    opacity: 0.6;
-    transition: all 0.4s;
+/* Define regras CSS para ícones de redes sociais */
+.rede {
+    width: 36px; /* Define a largura dos ícones */
+    opacity: 0.6; /* Define a opacidade inicial dos ícones */
+    transition: all 0.4s; /* Adiciona uma transição de 0.4 segundos para todas as propriedades */
 }
 
-.rede:hover{
-    opacity: 1;
-    transform: translateY(-5px);
+/* Define regras de hover (quando o mouse passa sobre) para ícones de redes sociais */
+.rede:hover {
+    opacity: 1; /* Define a opacidade como 1 (totalmente visível) quando hover */
+    transform: translateY(-5px); /* Move os ícones para cima por 5 pixels quando hover */
 }
 
-.social{
-   margin-left: auto;
-   display: flex;
-   align-items: center;
-   column-gap: 24px; 
+/* Define regras CSS para a seção de redes sociais */
+.social {
+    margin-left: auto; /* Alinha a seção de redes sociais à esquerda do cabeçalho */
+    display: flex; /* Usa o modelo de layout flexível */
+    align-items: center; /* Centraliza verticalmente os filhos */
+    column-gap: 24px; /* Define o espaçamento entre as colunas */
 }
 
-main{
-    flex: 1;
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    
-    width: 100%;
-    max-width: 1200px ;
+/* Define regras CSS para a seção principal */
+main {
+    flex: 1; /* Ocupa o espaço restante verticalmente */
+    display: flex; /* Usa o modelo de layout flexível */
+    align-content: center; /* Centraliza verticalmente os filhos */
+    justify-content: space-between; /* Distribui o espaço entre os filhos */
+    width: 100%; /* Define a largura como 100% da largura do contêiner pai */
+    max-width: 1200px; /* Define a largura máxima da seção principal */
 }
 
-p{
-    color: aliceblue;
-    font-size: 18px;
-    margin: 20px 0 28px;
-    padding-bottom: 25px;
-    line-height: 1.5;
+/* Define regras CSS para parágrafos */
+p {
+    color: aliceblue; /* Define a cor do texto */
+    font-size: 18px; /* Define o tamanho da fonte */
+    margin: 20px 0 28px; /* Define margens superior e inferior e margem à direita e à esquerda como zero */
+    padding-bottom: 25px; /* Define o preenchimento inferior */
+    line-height: 1.5; /* Define a altura da linha */
 }
 
-.logo{
-    width: 350px;
+/* Define regras CSS para a logo */
+.logo {
+    width: 350px; /* Define a largura da logo */
 }
 
-.infos{
-    width: 100%;
-    max-width: 500px;
+/* Define regras CSS para informações */
+.infos {
+    width: 100%; /* Define a largura como 100% da largura do contêiner pai */
+    max-width: 500px; /* Define a largura máxima das informações */
 }
 
-.zoro{
-    width: 629px;
-    height: 476px;
+/* Define regras CSS para a imagem com classe "zoro" */
+.zoro {
+    width: 629px; /* Define a largura da imagem */
+    height: 476px; /* Define a altura da imagem */
 }
 
-.mainContainer{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Define regras CSS para o container principal */
+.mainContainer {
+    height: 100vh; /* Define a altura como 100% da altura da janela de visualização */
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: center; /* Centraliza horizontalmente os filhos */
+    align-items: center; /* Centraliza verticalmente os filhos */
 }
 
+
+/* botão X */
 
 .btn {
   line-height: 50px;
