@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+div[class*=box] {
+  height: 33.33%;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; /* move o fundo p trás */
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* cobertura total */
+}
+
+.background::after{
+    content: '';
+
+    width: inherit; /* largura da div em que está dentro */
+    height: inherit; /* altura da div em que está dentro */
+
+    inset: 0; /* margins internet */ 
+    position: fixed;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%,rgba(10, 12, 16, 0.7) 50%,rgba(10, 12, 16, 0.99) 85% );
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100VH;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    column-gap: 64px;
+    width: 100%;
+    max-width: 1200px ;
+    padding-top: 24px;
+}
+
+header img{
+    width: 70px;
+    height: auto;
+}
+
+.lista{
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+    list-style: none; /* tira as bolinhas */
+    color: aliceblue;
+}
+
+.item{
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.item:hover{
+    color: rgba(184, 45, 45, 0.829);
+}
+
+#chapeu{
+    transition: all 0.4s;
+}
+
+#chapeu:hover{
+    transform: rotate(35deg);
+}
+
+.rede{
+    width: 36px;
+    opacity: 0.6;
+    transition: all 0.4s;
+}
+
+.rede:hover{
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.social{
+   margin-left: auto;
+   display: flex;
+   align-items: center;
+   column-gap: 24px; 
+}
+
+main{
+    flex: 1;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    
+    width: 100%;
+    max-width: 1200px ;
+}
+
+p{
+    color: aliceblue;
+    font-size: 18px;
+    margin: 20px 0 28px;
+    padding-bottom: 25px;
+    line-height: 1.5;
+}
+
+.logo{
+    width: 350px;
+}
+
+.infos{
+    width: 100%;
+    max-width: 500px;
+}
+
+.zoro{
+    width: 629px;
+    height: 476px;
+}
+
+.mainContainer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+.btn-two {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative; 
+  }
+  .btn-two span {
+    z-index: 2; 
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+  }
+  .btn-two::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+  }
+  .btn-two::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+  }
+  .btn-two:hover::before {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,0);
+  }
+  .btn-two:hover::after {
+    transform: rotate(45deg);
+    background-color: rgba(255,255,255,0);
+  }
