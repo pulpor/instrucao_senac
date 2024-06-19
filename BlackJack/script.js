@@ -15,8 +15,8 @@ function criarBaralho(){
     return baralho;
 }
 
-function embaralhar(baralho){
-    for(let i = baralho.length - 1; i > 0; i--) {
+function embaralhar() {
+    for (let i = baralho.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [baralho[i], baralho[j]] = [baralho[j], baralho[i]];
     }
@@ -51,14 +51,20 @@ function obterProximaCarta(){
     return baralho.pop();
 }
 
-function mostrarCartas(mao, elementId){
+function mostrarCartas(mao, elementId) {
     const elementoMao = document.getElementById(elementId);
     elementoMao.innerHTML = '';
 
-    for (let carta of mao){
+    for (let carta of mao) {
         const elementoCarta = document.createElement('div');
         elementoCarta.className = 'card';
-        elementoCarta.textContent = carta.naipe + ' ' + carta.valor; 
+
+        elementoCarta.textContent = `${carta.valor} ${carta.naipe}`;
+
+        if (carta.naipe === '♥' || carta.naipe === '♦') {
+            elementoCarta.classList.add('vermelho');
+        }
+
         elementoMao.appendChild(elementoCarta);
     }
 }
